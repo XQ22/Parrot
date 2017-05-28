@@ -3,13 +3,44 @@
 <head>
 <title>PARROT</title>
 <script>
-var PlayerName = "";
+
+var command = "";
+var data = "";
+var gamestate = "";
+
+function setCookie(data) {
+    document.cookie = "data=" + data + ";gamestate=" + gamestate + ";path=/";
+}
+
+function getCookie(cname) { //magic code from W3
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function checkCookie() {
+    gamestate = getCookie("gamestate");
+    data = getCookie("data");
+}
+
+function parseCommand() {
+  
+}
 </script>
 </head>
 <body>
-<h1>PARROT</h1>
-<div id="contents">
-<p>Enter your psuedonym here: <input id="name" /></p>
-</div>
+<h1>PARROT: a text adventure <i>in <b>SPACE</b></i></h1>
+<div id="contents"></div>
+  <p><button onClick="parseCommand" >&rt;</button><input id="command" /></p>
+
 </body>
 </html>
