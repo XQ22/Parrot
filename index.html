@@ -4,11 +4,10 @@
 <title>PARROT</title>
 <script>
 
-var command = "";
 var data = "";
 var gamestate = "";
 
-function setCookie(data) {
+function setCookie() {
     document.cookie = "data=" + data + ";gamestate=" + gamestate + ";path=/";
 }
 
@@ -32,15 +31,19 @@ function checkCookie() {
     data = getCookie("data");
 }
 
-function parseCommand() {
-    command = document.getElementById("command").value;
+function makeRoom() {
+
 }
+    
 </script>
 </head>
 <body>
-<h1>PARROT: a text adventure <i>in <b>SPACE</b></i></h1>
-<div id="contents"></div>
-  <p><button onClick="parseCommand" >&rt;</button><input id="command" /></p>
-
+<table>
+<thead>
+<tr><td width="80%" ><h1>PARROT: a room adventure <i>in <b>SPACE</b></i></h1></td><td width="20%"><button onClick="checkCookie()">LOAD</button><button onClick="setCookie()">SAVE</button></td></tr>
+</thead>
+<tbody>
+<tr><td></td></tr>
+</tbody>
 </body>
 </html>
