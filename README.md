@@ -1,7 +1,9 @@
 # Parrot
 
-A game about space travel
+A game about space travel, authoritarian governments, bureaucracy, theft, and navigation. The main mechanic is moving between rooms.
 
-## Schedule
+## Schedule/Updatelog
 
-Prototype A --> 20th March 02017 CE
+FORMAT: [Version ID] (Features) --> [Hopefully Attained Date]
+
+Prototype Alpha-1 (1 Area) --> June 30
