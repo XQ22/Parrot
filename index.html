@@ -4,8 +4,8 @@
 <title>PARROT</title>
 <script>
 
-var data = "";
-var gamestate = "";
+var data = ""; //Inventory(8)-Skills(8)
+var gamestate = ""; //Area(2)-Room(2)
 
 function setCookie() {
     document.cookie = "data=" + data + ";gamestate=" + gamestate + ";path=/";
@@ -43,7 +43,7 @@ function makeRoom() {
 <tr><td width="80%" ><h1>PARROT: a room adventure <i>in <b>SPACE</b></i></h1></td><td width="20%"><button onClick="checkCookie()">LOAD</button><button onClick="setCookie()">SAVE</button></td></tr>
 </thead>
 <tbody>
-<tr><td></td></tr>
+<tr><td><img width="20%" src="" /></td></tr>
 </tbody>
 </body>
 </html>
