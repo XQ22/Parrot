@@ -4,12 +4,13 @@
 <title>PARROT</title>
 <script>
 
-var data = ""; //Inventory(8)-Skills(8)
-var gamestate = ""; //Area(2)-Room(2)
+var rooms = [[0,"Room of Nothingness","","There is nothing in this room"]]; // AreaID, Roomname, RoomImage, Description, Items(32)
+var data = "0000000000000000"; //Inventory(8)-Skills(8)
+var gamestate = "0000"; //Area(2)-Room(2)
 
 function setCookie() {
     document.cookie = "data=" + data + ";gamestate=" + gamestate + ";path=/";
-}
+};
 
 function getCookie(cname) { //magic code from W3
     var name = cname + "=";
@@ -24,16 +25,17 @@ function getCookie(cname) { //magic code from W3
         }
     }
     return "";
-}
+};
 
 function checkCookie() {
     gamestate = getCookie("gamestate");
     data = getCookie("data");
-}
+};
 
 function makeRoom() {
-
-}
+    var use=gamestate.substring(2).toNumber();
+    document.getElementById("ROOM").src = rooms[use][2];
+};
     
 </script>
 </head>
@@ -43,7 +45,8 @@ function makeRoom() {
 <tr><td width="80%" ><h1>PARROT: a room adventure <i>in <b>SPACE</b></i></h1></td><td width="20%"><button onClick="checkCookie()">LOAD</button><button onClick="setCookie()">SAVE</button></td></tr>
 </thead>
 <tbody>
-<tr><td><img width="20%" src="" /></td></tr>
+<tr><td><img width="20%" src="" id="ROOM" /></td><td rowspan="2" width="80%"><p id="DESC"></p></td></tr>
+<tr><td>
 </tbody>
 </body>
 </html>
