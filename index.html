@@ -4,7 +4,7 @@
 <title>PARROT</title>
 <script>
 
-var rooms = [[0,"Room of Nothingness","","There is nothing in this room"]]; // AreaID, Roomname, RoomImage, Description, Items(32)
+var rooms = [[0,"Room of Nothingness","https://i.redd.it/85utgun5425z.jpg","There is nothing in this room"]]; // AreaID, Roomname, RoomImage, Description, Doors (4), Interactive items (4)
 var data = "0000000000000000"; //Inventory(8)-Skills(8)
 var gamestate = "0000"; //Area(2)-Room(2)
 
@@ -45,8 +45,9 @@ function makeRoom() {
 <tr><td width="80%" ><h1>PARROT: a room adventure <i>in <b>SPACE</b></i></h1></td><td width="20%"><button onClick="checkCookie()">LOAD</button><button onClick="setCookie()">SAVE</button></td></tr>
 </thead>
 <tbody>
-<tr><td><img width="20%" src="" id="ROOM" /></td><td rowspan="2" width="80%"><p id="DESC"></p></td></tr>
-<tr><td>
+<tr><td><img width="20%" src="" id="ROOM" /></td><td rowspan="3" width="80%"><p id="DESC"></p></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
 </tbody>
 </body>
 </html>
