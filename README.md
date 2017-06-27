@@ -6,4 +6,4 @@ A game about space travel, authoritarian governments, bureaucracy, theft, and na
 
 FORMAT: [Version ID] (Features) --> [Hopefully Attained Date]
 
-Prototype Alpha-1 (1 Area) --> June 30
+Prototype Alpha-1 (1 Room) --> June 30
